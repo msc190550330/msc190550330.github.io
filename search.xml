@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>补档1()</title>
+      <link href="/2021/09/25/%E8%A1%A5%E6%A1%A31/"/>
+      <url>/2021/09/25/%E8%A1%A5%E6%A1%A31/</url>
+      
+        <content type="html"><![CDATA[<h2 id="标签的属性"><a href="#标签的属性" class="headerlink" title="标签的属性"></a>标签的属性</h2><p>在HTML中有许多的标签，例如: &lt;h1&gt; &lt;p&gt;<br><br><br>每个标签都可以设置属性，它控制着标签的内容如何显示，属性的写法是一个名值对。例如：&lt;p size=”5”&gt;&lt;/p&gt;<br>;在写属性时需要将其与标签名或其他属性用空格隔开，像前一个例子；另外属性的编写需要根据文档中的规定，<br>像size属性有属性值，用引号包住，而有些属性却没有</p><h2 id="实体"><a href="#实体" class="headerlink" title="实体"></a>实体</h2><p>我们在编写HTML时会用到标点符号，而有一些特殊符号是不能直接在HTML中编写的，比如连续的空格，左右尖括号等<br><br><br>连续的空格会被浏览器自动解析为一个空格，所以我们需要使用html中的转义字符（实体）。<br><br><br>&amp;nbsp(空格);<br><br><br>&amp;lt(左尖括号);<br><br><br>&amp;gt(右尖括号);</p><h2 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h2><p>首先meta标签不是给用户看的，它位于HTML文档头部的<head>标记 和<title>标记之间，<br>它主要用于设置网页中的一些元数据，它有两个重要的属性：name(指定的数据的名称)和content(指定的数据的内容)<br><br><br>1.Keywords (关键字)<br><br><br>说明：告诉搜索引擎你网页的关键字是什么，可以用多个关键词，每个要逗号隔开<br><br><br>用法：&lt;meta name=”keywords” content=”HTML,CSS，Javascrip”&gt;<br><br><br>2.Description (网页描述)<br><br><br>说明：告诉搜索引擎你的网页主要内容。<br><br><br>用法：&lt;meta name=”description” content=”京东JD.COM-专业的综合网上购物商城”&gt;<br><br><br>3.Robots (机器人向导)<br>说明：Robots用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。<br>    Content的参数有all、none、index、noindex、follow、nofollow。<br>    默认是all。<br><br><br>用法：&amp;ltmeta name=”robots” content=”All|None|Index|Noindex|Follow|Nofollow”&amp;gt<br><br><br>all:文件将被检索,且页面上的链接可以被查询;<br>none:文件将不被检索,且页面上的链接不可以被查询;(和”noindex, no follow” 起相同作用)<br>index:文件将被检索;（让robot/spider登录）<br>follow:页面上的链接可以被查询;<br>noindex:文件将不被检索,但页面上的链接可以被查询;(不让robot/spider登录)<br>nofollow:文件将不被检索,页面上的链接可以被查询。(不让robot/spider顺着此页的连接往下探找)<br><br><br>4.Author (作者)<br><br><br>说明：标注网页的作者或制作组,emall<br><br><br>用法：&lt;meta name=”author” content=”苦橙，苦橙@qq.com”&gt;<br><br><br>5.Copyright (版权)<br><br><br>说明：标注版权<br><br><br>用法：&lt;meta name=”copyright” content=”本blog版权归苦橙所有”&gt;<br><br><br>6.Generator (编辑器)<br><br><br>说明：编辑器的说明<br><br><br>用法：&lt;meta name=”generator” content=”PCDATA|FrontPage|”&gt;<br><br><br>注意：Content=”你所用编辑器”<br><br><br>7.Revisit-after (重访)<br><br><br>说明：通知搜索引擎多少天访问一次<br><br><br>用法：&lt;meta name=”revisit-after” content=”7 days”&gt;<br><br><br>————————————————<br>此段借鉴了CSDN博主「清枫草塘」的原创文章<br><br><br>原文链接：<a href="https://blog.csdn.net/freshlover/article/details/25322839/">https://blog.csdn.net/freshlover/article/details/25322839/</a></p><h2 id="语义化的标签"><a href="#语义化的标签" class="headerlink" title="语义化的标签"></a>语义化的标签</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+            <tag> HTML基础 </tag>
+            
+            <tag> 补档 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/09/21/hello-world/"/>
       <url>/2021/09/21/hello-world/</url>
