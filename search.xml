@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>CSS选择器2</title>
+      <link href="/2021/10/09/2/"/>
+      <url>/2021/10/09/2/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS选择器1</title>
+      <link href="/2021/10/08/CSS%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+      <url>/2021/10/08/CSS%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<p>CSS的选择器主要有五种类型但其实还可以细分出几个，首先是常用选择器，包括标记选择器（元素选择器）、id选择器、类选择器和通配选择器。</p><ol><li><p>标记选择器<br>它是根据标签名来选中指定的元素，进行设置；语法是：标签名{}，例如：p{}、h1{}、div{}</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line">h1&#123;</span><br><span class="line">    color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>id选择器<br>他是根据元素的id属性值来选中一个元素，语法：#id属性值{}；例如：#box{}、#red{};但这种选择器有很多的限制，首先只有页面上的标记（body标记以及被它包含的子标记）才能具有给定的id，并且每个id属性的取值必须唯一且只能用于指定的一个标记。id属性的取值必须以字母开头由字母、数字、下划线、连字符组成</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    #red&#123;</span><br><span class="line">        color: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;p&gt;你好&lt;/p&gt;</span><br><span class="line">    &lt;p id=&quot;red&quot;&gt;你好&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></li><li><p>类选择器<br>根据元素的class属性值来选中一组元素，在任何合法的HTML标记中都可以使用class属性，在CSS中使用类选择器就可以基本舍弃id选择器了。语法：.class属性值，例如：.blue{}；另外一个标签中可以使用多个class每个之间用空格隔开</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.blue</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.abc</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">    &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;blue abc&quot;</span>&gt;</span>我也是标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure><p>另外类选择器是可以重复使用的，多个标签可以用同一个class，所以延伸出通过class属性来为元素分组。</p></li><li><p>元素分组<br>元素分组包含两个选择器：交集选择器和并集选择器。<br>交集选择器的作用是选择同时符合多个条件的元素，语法：选择器1选择器2选择器n{}，需要注意的是如果里面含有标记选择器则需要以标记选择器开头，例如：div.red{}、.a.b.c{}，而在body页面的class中每个类之间要用空格隔开</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    div.red&#123;</span><br><span class="line">        font-size: 30px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .a.b.c&#123;</span><br><span class="line">        color: blue;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;red&quot;&gt;我是div&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;red2 a b c&quot;&gt;我是div2&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure><p>并集选择器的作用是同时选择多个选择器对应的元素，语法：选择器1,选择器2,选择器n{}，例如：#b1,p,h1,span,div.red{}</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">h1,span&#123;</span><br><span class="line">    color: green;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;标题&lt;/h1&gt;</span><br><span class="line">    &lt;span&gt;haha&lt;/span&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></li><li><p>关系选择器<br>每一个标签之间是有关系的</p><blockquote><p> 父元素：直接包含子元素的元素叫做父元素<br> 子元素：直接被父元素包含的元素是子元素<br> 祖先元素：直接或间接包含后代的元素叫做祖先元素；一个元素的父元素也是它的祖先元素<br> 后代元素：直接或间接被祖先元素包含的元素叫做后代元素，子元素也是后代元素<br> 兄弟元素：拥有相同父元素的元素是兄弟元素</p></li></ol></blockquote>这样我们引入了两个选择器：子元素选择器和后代元素选择器先写一份body里的内容例子,下面选择器的说明内容都是参照此内容<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;box&quot;&gt;</span><br><span class="line">        我是一个div</span><br><span class="line">        &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            我是div中的p元素</span><br><span class="line">            &lt;span&gt;我是p元素中的span&lt;/span&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;div&gt;我是div中的div&lt;/div&gt;</span><br><span class="line">        &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">        &lt;div&gt;ws1&lt;/div&gt;</span><br><span class="line">        &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">        &lt;div&gt;ws2&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span&gt;</span><br><span class="line">            我是div外的span</span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br></pre></td></tr></table></figure><p>子元素选择器的作用是选择指定父元素的指定子元素，语法：父元素 &gt; 子元素</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">div.box &gt; span&#123;</span><br><span class="line">    color: orange;</span><br><span class="line">&#125;</span><br><span class="line">div &gt; p &gt; span&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>后代元素选择器的作用是选中指定元素内的所有指定的后代元素，语法：祖先 后代</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div span&#123;</span><br><span class="line">    color: skyblue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>另外还有两个特殊的指定方法：<br>选择指定元素的下一个兄弟，必须是指定元素紧挨着的下一个兄弟，语法：前一个 + 下一个；例如：p + span只有span变化。但是如果在p和span标签中间随便添加一个其他标签比如div就失效了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p + span&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>选中指定元素的下边指定的所有兄弟，此时就不需要紧挨着了中间也可以任意插入标签，它只会选择指定的兄弟标签改变，语法：兄 ~ 弟，例如p ~ span,那么p标签后面的所有span标签都会被设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p ~ span&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="6"><li>通配选择器<br>它用于选中页面中的所有元素，语法：*{}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS的简介和语法</title>
       <link href="/2021/10/07/CSS%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E8%AF%AD%E6%B3%95/"/>
       <url>/2021/10/07/CSS%E7%9A%84%E7%AE%80%E4%BB%8B%E5%92%8C%E8%AF%AD%E6%B3%95/</url>
@@ -42,9 +100,9 @@
       
       <categories>
           
-          <category> 前端基础 </category>
-          
           <category> 学习 </category>
+          
+          <category> 前端基础 </category>
           
       </categories>
       
@@ -71,9 +129,9 @@
       
       <categories>
           
-          <category> 前端基础 </category>
-          
           <category> 学习 </category>
+          
+          <category> 前端基础 </category>
           
       </categories>
       
@@ -100,9 +158,9 @@
       
       <categories>
           
-          <category> 前端基础 </category>
-          
           <category> 学习 </category>
+          
+          <category> 前端基础 </category>
           
       </categories>
       
