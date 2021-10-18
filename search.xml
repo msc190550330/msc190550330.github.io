@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>样式的继承和选择器的权重</title>
+      <link href="/2021/10/11/%E6%A0%B7%E5%BC%8F%E7%9A%84%E7%BB%A7%E6%89%BF%E5%92%8C%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%9D%83%E9%87%8D/"/>
+      <url>/2021/10/11/%E6%A0%B7%E5%BC%8F%E7%9A%84%E7%BB%A7%E6%89%BF%E5%92%8C%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%9D%83%E9%87%8D/</url>
+      
+        <content type="html"><![CDATA[<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承是发生在祖先后代元素之间的，我们为一个元素设置的样式会应用到它的后代元素上，继承方便了我们的开发，利用继承我们可以将一些通用的样式统一设置到共同的祖先元素上，这样只需设置一次样式就可以让所有的元素都具有该样式。<br>当然也有注意点：并不是所有的样式都会被继承，比如背景相关、布局相关等</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    p&#123;</span><br><span class="line">        color: red;</span><br><span class="line">        background-color: orange;</span><br><span class="line">    &#125;</span><br><span class="line">    div&#123;</span><br><span class="line">        color: yellow;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">        我是一个p元素</span><br><span class="line">        &lt;span&gt;我是p元素中的span&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        我是div元素</span><br><span class="line">        &lt;span&gt;</span><br><span class="line">            我是div中的span</span><br><span class="line">            &lt;em&gt;我是span中的em&lt;/em&gt;</span><br><span class="line">        &lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure><p>最后看效果可知p和div的样式都成功应用到了各自的后代元素</p><h2 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h2><p>我们在使用CSS选择器时会思考这样一个问题，在设置样式时给同一个标签使用多个不同的选择器会如何？<br>比如给div标签同时设置id选择器、类选择器等等，那么div标签会使用哪个选择器呢<br>这就是样式的冲突：当通过不同的选择器选中相同的标签并且为相同的样式设置不同的值时，此时就会发生样式的冲突。发生样式冲突时应用哪个样式将会由选择器的权重（优先级）决定</p><blockquote> 选择器的权重<p>内联样式        1,0,0,0      &lt;div style=”…”&gt;&lt;/div&gt;<br>id选择器        0,1,0,0    #box{}<br>类与伪类选择器    0,0,1,0   .abc{}<br>元素（标签）选择器 0,0,0,1   p{}<br>通配选择器        0,0,0,0   *{}<br>继承的样式        没有优先级</p></blockquote>所以总体来说：内联>id>类>元素>通配>继承<p>比较优先级时：需要将所有的选择器的优先级进行相加计算，最后优先级越高则越优先显示（分组选择器是单独计算的）<br>注意：<br>1.选择器的累加不会超过其最大的数量级，例如类选择器再高也不会超过id选择器；<br>2.如果优先级计算后相同，此时优先使用靠下的样式；<br>3.在开发中慎用的一个东西，可以在一个样式的后面添加!important，此时该样式会获取最高的优先级甚至超过内联样式</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS选择器2</title>
       <link href="/2021/10/09/CSS%E9%80%89%E6%8B%A9%E5%99%A82/"/>
       <url>/2021/10/09/CSS%E9%80%89%E6%8B%A9%E5%99%A82/</url>
