@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>盒子模型相关知识</title>
+      <link href="/2021/10/27/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
+      <url>/2021/10/27/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h2><p>首先网页是一个多层的结构，一层摞着一层，在这些层中最下面的一层叫做文档流，我们写的元素默认都是在文档流中的；因此元素主要有两种状态：在文档流中和脱离文档流。<br>那么元素在文档流中有什么特点呢，首先是块元素，它会在页面中独占一行，宽度是父元素的全部，高度是被内容撑开的；其次是行内元素，它不会占页面一行只占自身大小，如果一行中不能容纳所有的行内元素则会换行，它的高度和宽度都是被内容撑开的</p><h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>我们在编写一个页面时首先需要将整个页面做布局，将每个部分看做一个矩形的盒子后那么我们所做的操作就是将不同的盒子摆到不同的位置，每个盒子都由几个部分组成</p><h3 id="内容区（content）"><a href="#内容区（content）" class="headerlink" title="内容区（content）"></a>内容区（content）</h3><p>内容区就是文章之类的内容显示的位置，</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>单位知识</title>
       <link href="/2021/10/18/%E5%8D%95%E4%BD%8D%E7%9F%A5%E8%AF%86/"/>
       <url>/2021/10/18/%E5%8D%95%E4%BD%8D%E7%9F%A5%E8%AF%86/</url>
