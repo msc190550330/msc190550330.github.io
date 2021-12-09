@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>浮动</title>
+      <link href="/2021/12/09/%E6%B5%AE%E5%8A%A8/"/>
+      <url>/2021/12/09/%E6%B5%AE%E5%8A%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="浮动的简介"><a href="#浮动的简介" class="headerlink" title="浮动的简介"></a>浮动的简介</h2><p>浮动是通过float属性来设置的，元素设置浮动后悔完全从文档流中脱离，不再占用文档流的位置，所以根据逻辑该元素下方的元素因为还在文档流中所以会自动的向上移动<br>这样会出现元素盖住元素的情况，这时就要结合定位来重新设置布局位置。</p><blockquote><p>浮动float的可选值<br>    none 默认值，元素不浮动<br>    left 元素向左浮动<br>    right 元素向右浮动 </p></blockquote>总结：浮动目前的主要作用就是让页面中的元素可以水平排列，通过浮动可以制作一些水平方向的布局<h2 id="浮动的特点"><a href="#浮动的特点" class="headerlink" title="浮动的特点"></a>浮动的特点</h2><ol><li>浮动元素会完全脱离文档流，不再占用文档流中的位置</li><li>设置浮动以后元素会向父元素的左侧或者右侧移动</li><li>浮动元素默认不会从父元素中移出</li><li>浮动元素向左或右移动时，不会超过它前边的浮动元素</li><li>如果浮动元素的上边是一个没有浮动的  块  元素，则浮动元素无法上移</li><li>浮动元素不会超过它上边的浮动的  兄弟  元素，最多和它一样高</li><li>浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，所以我们可以利用浮动来设置文字环绕图片的效果，当然想要分离的话可以设置文字所在的盒子模型的外边距远离浮动元素</li><li>元素设置浮动以后，块元素不再独占页面的一行，脱离文档流以后块元素的宽度和高度默认都会被内容撑开;行内元素脱离文档流以后会变成块元素，特点和块元素一样;总的来说脱离文档流以后不需要区分块和行内了</li></ol><h2 id="关于高度塌陷的问题"><a href="#关于高度塌陷的问题" class="headerlink" title="关于高度塌陷的问题"></a>关于高度塌陷的问题</h2><p>在浮动的布局中，父元素的高度默认是被子元素撑开的，当子元素浮动后，它会从文档流中脱离，无法撑起父元素的高度从而导致父元素的高度丢失，然后导致它下方的元素会自动上移导致页面的布局混乱。<br>我们可以通过设置开启BFC（块级格式化环境）来解决，BFC是CSS的一个隐含的属性，开启后该元素会变成一个独立的布局区域(1.元素不会被浮动元素所覆盖；2.子元素和父元素外边距不会重叠；3.可以包含浮动的子元素)<br>开启BFC的方法：1.设置元素的浮动（不推荐）；2.将元素设置为行内块元素（不推荐）；3.将元素的overflow属性设置为一个非visible的值（最常用的方法：overflow:hidden 开启BFC使其可以包含浮动元素）。</p><p>我们也可以使用clear属性，作用是清除浮动元素对当前元素所产生的影响；可选值：left,right,both(清除两侧中最大影响的那侧)。<br>最终方法：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .clearfix::before,</span><br><span class="line">    .clearfix::after&#123;</span><br><span class="line">        context:&#x27;&#x27;;</span><br><span class="line">        display: table;</span><br><span class="line">        clear: both;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><p>clearfix这个样式可以同时解决高度塌陷和外边距重叠的问题，当遇到哲学问题时，直接使用clearfix这个类即可<br>这是万能代码专门解决高度塌陷。<br>但是这种方法并不是所有编译器都可以使用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>盒子模型相关知识</title>
       <link href="/2021/10/27/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
       <url>/2021/10/27/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
